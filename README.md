@@ -1,2 +1,5 @@
-# WordPress-Plugin-srs-player
+# WordPress-Plugin-SrsPlayer
+
 A video streaming player for WordPress Plugin.
+
+
