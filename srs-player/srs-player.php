@@ -7,7 +7,7 @@
  * @wordpress-plugin
  * Plugin Name: SRS Player
  * Plugin URI:        http://wordpress.org/plugins/srs-player/
- * Description:       Play live streaming using HTTP-FLV/HLS/WebRTC.
+ * Description:       SRS Player is a video streaming player, supports HLS/HTTP-FLV/WebRTC etc.
  * Version:           1.0.0
  * Author:            Winlin Yang
  * Author URI:        https://github.com/ossrs/WordPress-Plugin-SrsPlayer

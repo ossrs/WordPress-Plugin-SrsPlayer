@@ -7,6 +7,8 @@ Requires PHP: 7.2
 Stable tag: 1.0.0
 License: MIT
 License URI: https://spdx.org/licenses/MIT.html
+Author: Winlin Yang
+Author URI: https://github.com/ossrs/WordPress-Plugin-SrsPlayer
 
 SRS Player is a video streaming player, supports HLS/HTTP-FLV/WebRTC etc.
 
@@ -20,8 +22,24 @@ SRS Player is a dedicated video streaming player, supports a set of protocols, c
 | Safari | YES | YES | YES |
 | Firefox | YES | YES | YES |
 
-You could create a video streaming using [SRS Droplet](https://ossrs.medium.com/how-to-setup-a-video-streaming-service-by-1-click-e9fe6f314ac6)
+= SRS Player Plugin Usage =
+
+For HLS live streaming, please use the following shortcode:
+
+`[srs_player url="https://your_droplet_ip/live/livestream.m3u8"]`
+
+For WebRTC streaming, the shortcode:
+
+`[srs_player url="webrtc://your_droplet_ip/live/livestream"]`
+
+For HTTP-FLV live streaming, the shortcode:
+
+`[srs_player url="https://your_droplet_ip/live/livestream.flv"]`
+
+You could create a video streaming server using [SRS Droplet](https://ossrs.medium.com/how-to-setup-a-video-streaming-service-by-1-click-e9fe6f314ac6)
 by only 1-Click.
+
+For detailed documentation, please visit the [Srs Player](https://github.com/ossrs/WordPress-Plugin-SrsPlayer) page.
 
 == Installation ==
 
