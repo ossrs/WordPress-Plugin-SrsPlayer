@@ -22,3 +22,18 @@ Next, visit your WordPress, install this plugin, and create a post with the foll
 
 If you are stuck, please get help from [discord](https://discord.gg/yZ4BnPmHAd)
 
+## Options
+
+You could specify options, for example, to limit the HLS:
+
+```text
+[srs_player url="https://your_droplet_ip/live/livestream.m3u8" width="720"]
+```
+
+The options of SRS player:
+
+* `url`: The url to play, supports HLS, HTTP-FLV and WebRTC, please see [Usage](#usage).
+* `width`: (Optional) The width to limit the video, it's not required.
+
+
+Winlin, 2022

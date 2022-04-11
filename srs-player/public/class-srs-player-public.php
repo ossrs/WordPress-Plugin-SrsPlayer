@@ -34,22 +34,37 @@ class Srs_Player_Public {
         $q = shortcode_atts(
             array(
                 'url' => '',
+                'controls' => 'controls',
+                'autoplay' => 'autoplay',
+                'muted' => 'muted',
+                'width' => '',
             ), $atts, $tag
         );
 
         if (empty($q['url'])) {
             return __('Please specify the url of stream', 'srs-player');
         }
-
+        $url = $q['url'];
         $id = 'srs-player-' . $this->random_str(32);
 
-        $o = '<div class="srs-player-wrapper">';
-        $o .= '  <video id="' . $id .'" controls autoplay muted></video>';
-        $o .= '<script>(function($) {';
-        $o .= '  new SrsPlayer("#' . $id . '", "' . $q['url'] . '").play();';
-        $o .= '})(jQuery);</script>';
-        $o .= '</div>';
+        $controls = ' controls=' . $q['controls'];
+        if ($q['controls'] != 'true' && $q['controls'] != 'controls') $controls = '';
 
+        $autoplay = ' autoplay=' . $q['autoplay'];
+        if ($q['autoplay'] != 'true' && $q['autoplay'] != 'autoplay') $autoplay = '';
+
+        $muted = ' muted=' . $q['muted'];
+        if ($q['muted'] != 'true' && $q['muted'] != 'muted') $muted = '';
+
+        $width = ' width="' . $q['width'] . '"';
+        if (empty($q['width'])) $width = '';
+
+        $o = <<<EOT
+    <div class="srs-player-wrapper">
+        <video id="${id}" ${controls}${autoplay}${muted}${width}></video>
+        <script>(function($) { new SrsPlayer("#${id}", "${url}").play(); })(jQuery);</script>
+    </div>
+EOT;
         return $o;
     }
 
@@ -58,7 +73,7 @@ class Srs_Player_Public {
         string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
     ): string {
         if ($length < 1) {
-            throw new RangeException("Length must be a positive integer");
+            throw new RangeException("Invalid length ${length}");
         }
         $pieces = [];
         $max = mb_strlen($keyspace, '8bit') - 1;

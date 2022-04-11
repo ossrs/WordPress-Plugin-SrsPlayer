@@ -41,6 +41,16 @@ by only 1-Click.
 
 For detailed documentation, please visit the [Srs Player](https://github.com/ossrs/WordPress-Plugin-SrsPlayer) page.
 
+= Shortcode Options =
+
+Options supported in the shortcode.
+
+**Width**
+
+Optional, limit the width of the video.
+
+`[srs_player url="https://your_droplet_ip/live/livestream.m3u8" width="720"]`
+
 == Installation ==
 
 1. Upload the SRS Player folder to the /wp-content/plugins/ directory
