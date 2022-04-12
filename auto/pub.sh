@@ -39,4 +39,4 @@ git tag -d $TAG 2>/dev/null && git push origin :$TAG
 git tag $TAG
 git push origin $TAG
 echo "publish $TAG ok"
-echo "    https://github.com/ossrs/WordPress-Plugin-SrsPlayer/tags"
+echo "    https://github.com/ossrs/WordPress-Plugin-SrsPlayer/actions"
