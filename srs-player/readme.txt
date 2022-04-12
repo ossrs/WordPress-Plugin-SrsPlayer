@@ -81,6 +81,11 @@ Yes, please follow the usage, use shortcode to embed to your post.
 
 No, please use default Video player of BlockEditor directly.
 
+== Screenshots ==
+
+1. SRS Player Shortcode for HLS/HTTP-FLV/WebRTC.
+2. The SRS Player Demo in a post.
+
 == Changelog ==
 
 = 1.0.3 =
