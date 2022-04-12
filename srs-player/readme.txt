@@ -83,6 +83,9 @@ No, please use default Video player of BlockEditor directly.
 
 == Changelog ==
 
+= 1.0.3 =
+Refine the installation of plugin.
+
 = 1.0.2 =
 Support auto release.
 
