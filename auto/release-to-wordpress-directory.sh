@@ -17,11 +17,13 @@ echo "Release to WordPress directory, $RELEASE $GIT_MESSAGE"
 
 rm -rf svn/trunk &&
 cp -R srs-player svn/trunk &&
-cd svn && svn add trunk --force &&
-svn copy trunk tags/$RELEASE
+(cd svn && svn add trunk --force) &&
+(cd svn && svn copy trunk tags/$RELEASE)
 if [[ $? -ne 0 ]]; then echo "Update files for $RELEASE failed"; exit 1; fi
 
 echo "Please checkin manually:"
 echo "  cd svn"
 echo "  svn ci -m \"Release $RELEASE: $GIT_MESSAGE\" --username winlinvip"
+echo "Or revert it:"
+echo "  svn revert -R ."
 
