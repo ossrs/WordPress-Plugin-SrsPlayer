@@ -40,7 +40,6 @@ jobs:
       - name: Create source tar.gz
         run: |
           DEST_DIR=srs-player && mkdir -p $DEST_DIR &&
-          cp README.md $DEST_DIR &&
           zip -q -r ${DEST_DIR}.zip ${DEST_DIR} && du -sh ${DEST_DIR}* &&
           echo "SRS_SOURCE_TAR=${DEST_DIR}.zip" >> $GITHUB_ENV &&
           echo "SRS_SOURCE_MD5=$(md5sum ${DEST_DIR}.zip| awk '{print $1}')" >> $GITHUB_ENV
@@ -62,7 +61,7 @@ jobs:
             * [Plugin](https://wordpress.org/plugins/srs-player)
             * [Features](https://github.com/ossrs/WordPress-Plugin-SrsPlayer/blob/${{ github.sha }}/srs-player/readme.txt)
           draft: false
-          prerelease: true
+          prerelease: false
 
       # Upload release source files
       - name: Upload Release Assets Source
