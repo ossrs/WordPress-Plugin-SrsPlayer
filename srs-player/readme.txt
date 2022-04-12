@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== SRS Player ===
 Contributors: winlinvip
 Tags: video, audio, live streaming, video streaming, player, video player
 Requires at least: 5.3
