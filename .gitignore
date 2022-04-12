@@ -27,4 +27,5 @@ node_modules/
 plugins
 .DS_Store
 *.zip
+svn
 
