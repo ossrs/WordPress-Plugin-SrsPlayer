@@ -20,9 +20,9 @@ VERSION="1.0.$NEXT" &&
 TAG="v$VERSION" &&
 echo "publish VERSION=$VERSION, TAG=$TAG"
 
-cat srs-player/readme.txt |sed "s/Stable tag: 1.0.1/Stable tag: $VERSION/g" > tmp.txt && mv tmp.txt srs-player/readme.txt &&
-cat srs-player/srs-player.php |sed "s/Version: 1.0.1/Version: $VERSION/g" > tmp.txt && mv tmp.txt srs-player/srs-player.php &&
-cat srs-player/srs-player.php |sed "s/define( 'SRS_PLAYER_VERSION', '1.0.1' );/define( 'SRS_PLAYER_VERSION', '$VERSION' );/g" > tmp.txt &&
+cat srs-player/readme.txt |sed "s/Stable tag: 1.*/Stable tag: $VERSION/g" > tmp.txt && mv tmp.txt srs-player/readme.txt &&
+cat srs-player/srs-player.php |sed "s/Version: 1.*/Version: $VERSION/g" > tmp.txt && mv tmp.txt srs-player/srs-player.php &&
+cat srs-player/srs-player.php |sed "s/define( 'SRS_PLAYER_VERSION', '1.*/define( 'SRS_PLAYER_VERSION', '$VERSION' );/g" > tmp.txt &&
 mv tmp.txt srs-player/srs-player.php
 if [[ $? -ne 0 ]]; then echo "Change release failed"; exit 1; fi
 
