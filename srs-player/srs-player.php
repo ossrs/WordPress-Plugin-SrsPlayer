@@ -6,14 +6,14 @@
  *
  * @wordpress-plugin
  * Plugin Name: SRS Player
- * Plugin URI:        https://github.com/ossrs/WordPress-Plugin-SrsPlayer
- * Description:       SRS Player is a video streaming player, supports HLS/HTTP-FLV/WebRTC etc.
- * Version:           1.0.1
- * Author:            Winlin Yang
- * Author URI:        https://github.com/ossrs/WordPress-Plugin-SrsPlayer
- * License:           MIT
- * License URI:       https://spdx.org/licenses/MIT.html
- * Text Domain:       srs-player
+ * Plugin URI: https://github.com/ossrs/WordPress-Plugin-SrsPlayer
+ * Description: SRS Player is a video streaming player, supports HLS/HTTP-FLV/WebRTC etc.
+ * Version: 1.0.1
+ * Author: Winlin Yang
+ * Author URI: https://github.com/ossrs/WordPress-Plugin-SrsPlayer
+ * License: MIT
+ * License URI: https://spdx.org/licenses/MIT.html
+ * Text Domain: srs-player
  */
 
 if (!defined('WPINC')) {

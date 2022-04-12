@@ -82,6 +82,9 @@ No, please use default Video player of BlockEditor directly.
 
 == Changelog ==
 
+= 1.0.2 =
+* Support auto release.
+
 = 1.0.1 =
 * Refine documents content.
 * Support option width for player.

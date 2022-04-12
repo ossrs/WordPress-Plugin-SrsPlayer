@@ -16,8 +16,16 @@ REVISION=$(echo $RELEASE|awk -F . '{print $3}')
 let NEXT=$REVISION+1
 echo "Last release is $RELEASE, revision is $REVISION, next is $NEXT"
 
-TAG="v1.0.$NEXT"
-echo "publish $TAG"
+VERSION="1.0.$NEXT" &&
+TAG="v$VERSION" &&
+echo "publish VERSION=$VERSION, TAG=$TAG"
+
+cat srs-player/readme.txt |sed "s/Stable tag: 1.0.1/Stable tag: $VERSION/g" > tmp.txt && mv tmp.txt srs-player/readme.txt &&
+cat srs-player/srs-player.php |sed "s/Version: 1.0.1/Version: $VERSION/g" > tmp.txt && mv tmp.txt srs-player/srs-player.php &&
+cat srs-player/srs-player.php |sed "s/define( 'SRS_PLAYER_VERSION', '1.0.1' );/define( 'SRS_PLAYER_VERSION', '$VERSION' );/g" > tmp.txt &&
+mv tmp.txt srs-player/srs-player.php &&
+git ci -am "Update srs-player version to $TAG"
+if [[ $? -ne 0 ]]; then echo "Release failed"; exit 1; fi
 
 git push
 git tag -d $TAG 2>/dev/null && git push origin :$TAG
