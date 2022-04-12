@@ -88,6 +88,9 @@ No, please use default Video player of BlockEditor directly.
 
 == Changelog ==
 
+= 1.0.5 =
+Update plugin name in readme.txt
+
 = 1.0.4 =
 Add screenshots for plugin.
 
