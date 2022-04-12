@@ -59,8 +59,9 @@ You could install it through the regular installer of the WordPress. Please down
 
 If you would like to install the latest develop version, please:
 
-1. Upload the `srs-player` folder to the ``/wp-content/plugins/` directory
-1. Activate the `SRS Player` plugin through the `Plugins` menu in WordPress
+1. Download the `srs-player.zip` from [releases](https://github.com/ossrs/WordPress-Plugin-SrsPlayer/releases).
+1. Click the `Plugins > Add Plugin > Uplaod Plugin` menu in WrodPress.
+1. Upload the `srs-player.zip` and active it.
 
 == Frequently Asked Questions ==
 
