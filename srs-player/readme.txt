@@ -82,9 +82,9 @@ No, please use default Video player of BlockEditor directly.
 
 == Changelog ==
 
-= 1.0.1 - Apr 12, 2022 =
+= 1.0.1 =
 * Refine documents content.
 * Support option width for player.
 
-= 1.0.0 - Apr 10, 2022 =
+= 1.0.0 =
 * Support HLS/WebRTC/HTTP-FLV video streaming.
