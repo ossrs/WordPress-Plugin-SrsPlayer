@@ -27,7 +27,7 @@ mv tmp.txt srs-player/srs-player.php
 if [[ $? -ne 0 ]]; then echo "Change release failed"; exit 1; fi
 
 GIT_MESSAGE=$(git log -1 --pretty=%B)
-cat srs-player/readme.txt | sed "s/== Changelog ==/== Changelog ==\n\n= $VERSION =\n$GIT_MESSAGE/g" > tmp.txt &&
+cat srs-player/readme.txt | sed "s/== Changelog ==/== Changelog ==\n\n= $VERSION =\n* $GIT_MESSAGE/g" > tmp.txt &&
 mv tmp.txt srs-player/readme.txt
 if [[ $? -ne 0 ]]; then echo "Generate Changelog failed"; exit 1; fi
 

@@ -20,15 +20,15 @@ SRS Player is a dedicated video streaming player, supports a set of protocols, c
 
 For HLS live streaming, please use the following shortcode:
 
-`[srs_player url="https://your_droplet_ip/live/livestream.m3u8"]`
+`[srs_player url="https://your_server/live/livestream.m3u8"]`
 
 For WebRTC streaming, the shortcode:
 
-`[srs_player url="webrtc://your_droplet_ip/live/livestream"]`
+`[srs_player url="webrtc://your_server/live/livestream"]`
 
 For HTTP-FLV live streaming, the shortcode:
 
-`[srs_player url="https://your_droplet_ip/live/livestream.flv"]`
+`[srs_player url="https://your_server/live/livestream.flv"]`
 
 You could create a video streaming server using [SRS Droplet](https://ossrs.medium.com/how-to-setup-a-video-streaming-service-by-1-click-e9fe6f314ac6) by only 1-Click.
 
@@ -51,7 +51,7 @@ Options supported in the shortcode.
 
 Optional, limit the width of the video.
 
-`[srs_player url="https://your_droplet_ip/live/livestream.m3u8" width="720"]`
+`[srs_player url="https://your_server/live/livestream.m3u8" width="720"]`
 
 == Installation ==
 
@@ -87,23 +87,16 @@ No, please use default Video player of BlockEditor directly.
 2. The SRS Player Demo in a post.
 
 == Changelog ==
+* Refine release script.
 
 = 1.0.6 =
-Update plugin release in readme.txt
-
-= 1.0.5 =
-Update plugin name in readme.txt
+* Update plugin release in readme.txt
+* Update plugin name in readme.txt
 
 = 1.0.4 =
-Add screenshots for plugin.
-
-= 1.0.3 =
-Refine the installation of plugin.
-
-= 1.0.2 =
-Support auto release.
-
-= 1.0.1 =
+* Add screenshots for plugin.
+* Refine the installation of plugin.
+* Support auto release.
 * Refine documents content.
 * Support option width for player.
 * Support auto release.
