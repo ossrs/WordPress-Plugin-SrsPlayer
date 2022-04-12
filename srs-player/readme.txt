@@ -4,7 +4,7 @@ Tags: video, audio, live streaming, video streaming, player, video player
 Requires at least: 5.3
 Tested up to: 5.9
 Requires PHP: 7.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: MIT
 License URI: https://spdx.org/licenses/MIT.html
 Author: Winlin Yang
@@ -81,6 +81,9 @@ Yes, please follow the usage, use shortcode to embed to your post.
 No, please use default Video player of BlockEditor directly.
 
 == Changelog ==
+
+= 1.0.2 =
+Support auto release.
 
 = 1.0.1 =
 * Refine documents content.
