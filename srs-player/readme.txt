@@ -4,7 +4,7 @@ Tags: video, audio, live streaming, video streaming, player, video player
 Requires at least: 5.3
 Tested up to: 5.9
 Requires PHP: 7.2
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: MIT
 License URI: https://spdx.org/licenses/MIT.html
 Author: Winlin Yang
@@ -14,15 +14,9 @@ SRS Player is a video streaming player, supports HLS/HTTP-FLV/WebRTC etc.
 
 == Description ==
 
-SRS Player is a dedicated video streaming player, supports a set of protocols, compatible with major browsers:
+SRS Player is a dedicated video streaming player, supports a set of protocols, compatible with major browsers, such as Chrome, Safari and Firefox.
 
-| - | HLS | WebRTC | HTTP-FLV |
-| --- | --- | --- | --- |
-| Chrome | YES | YES | YES |
-| Safari | YES | YES | YES |
-| Firefox | YES | YES | YES |
-
-= SRS Player Plugin Usage =
+= Usage =
 
 For HLS live streaming, please use the following shortcode:
 
@@ -36,10 +30,18 @@ For HTTP-FLV live streaming, the shortcode:
 
 `[srs_player url="https://your_droplet_ip/live/livestream.flv"]`
 
-You could create a video streaming server using [SRS Droplet](https://ossrs.medium.com/how-to-setup-a-video-streaming-service-by-1-click-e9fe6f314ac6)
-by only 1-Click.
+You could create a video streaming server using [SRS Droplet](https://ossrs.medium.com/how-to-setup-a-video-streaming-service-by-1-click-e9fe6f314ac6) by only 1-Click.
 
 For detailed documentation, please visit the [Srs Player](https://github.com/ossrs/WordPress-Plugin-SrsPlayer) page.
+
+= Key Features =
+
+* Embed live streaming into a post/page or anywhere on your WordPress site
+* Supports HLS/HTTP-FLV/WebRTC over HTTP or HTTPS for live streaming
+* Embed HTML5 videos which are compatible with all major browsers
+* Automatically play a video when the page is rendered
+* No setup required, simply install and start embedding videos
+* Lightweight and compatible with the latest version of WordPress
 
 = Shortcode Options =
 
@@ -53,28 +55,36 @@ Optional, limit the width of the video.
 
 == Installation ==
 
-1. Upload the SRS Player folder to the /wp-content/plugins/ directory
-2. Activate the SRS Player plugin through the 'Plugins' menu in WordPress
+You could install it through the regular installer of the WordPress. Please download plugin and install it using WordPress repository.
+
+If you would like to install the latest develop version, please:
+
+1. Upload the `srs-player` folder to the ``/wp-content/plugins/` directory
+1. Activate the `SRS Player` plugin through the `Plugins` menu in WordPress
 
 == Frequently Asked Questions ==
 
 = Does SRS Player supports HLS live streaming? =
 
-Yes.
+Yes, please follow the usage, use shortcode to embed to your post.
 
 = Does SRS Player supports HTTP-FLV live streaming? =
 
-Yes.
+Yes, please follow the usage, use shortcode to embed to your post.
 
 = Does SRS Player supports WebRTC live streaming? =
 
-Yes.
+Yes, please follow the usage, use shortcode to embed to your post.
 
 = Does SRS Player supports VoD HLS/MP4? =
 
-No, please use Video block directly.
+No, please use default Video player of BlockEditor directly.
 
 == Changelog ==
+
+= 1.0.1 - Apr 12, 2022 =
+* Refine documents content.
+* Support option width for player.
 
 = 1.0.0 - Apr 10, 2022 =
 * Support HLS/WebRTC/HTTP-FLV video streaming.
