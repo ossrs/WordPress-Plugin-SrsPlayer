@@ -87,6 +87,7 @@ No, please use default Video player of BlockEditor directly.
 2. The SRS Player Demo in a post.
 
 == Changelog ==
+* Support play MP4 VoD file.
 * Refine release script.
 
 = 1.0.6 =

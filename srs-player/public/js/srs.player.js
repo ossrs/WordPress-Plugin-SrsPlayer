@@ -16,6 +16,11 @@
     }
 
     self.__play = function () {
+      if (self.url.indexOf('.mp4') > 0) {
+        self.dom.prop('src', self.url);
+        return console.log(`Play by native for ${self.url}`);
+      }
+
       if (self.url.indexOf('.flv') > 0) {
         if (!flvjs.isSupported()) return console.error(`HTTP-FLV is not supported by browser`);
 
