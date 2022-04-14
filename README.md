@@ -16,9 +16,9 @@ Then, publish live streaming by OBS to your server, you should be able to play t
 
 Next, visit your WordPress, install this plugin, and create a post with the following shortcodes:
 
-* For HLS: `[srs_player url="https://your_droplet_ip/live/livestream.m3u8"]`
-* For WebRTC: `[srs_player url="webrtc://your_droplet_ip/live/livestream"]`
-* For HTTP-FLV: `[srs_player url="https://your_droplet_ip/live/livestream.flv"]`
+* For HLS: `[srs_player url="https://your_server_ip/live/livestream.m3u8"]`
+* For WebRTC: `[srs_player url="webrtc://your_server_ip/live/livestream"]`
+* For HTTP-FLV: `[srs_player url="https://your_server_ip/live/livestream.flv"]`
 
 If you are stuck, please get help from [discord](https://discord.gg/yZ4BnPmHAd)
 
@@ -27,7 +27,7 @@ If you are stuck, please get help from [discord](https://discord.gg/yZ4BnPmHAd)
 You could specify options, for example, to limit the HLS:
 
 ```text
-[srs_player url="https://your_droplet_ip/live/livestream.m3u8" width="720"]
+[srs_player url="https://your_server_ip/live/livestream.m3u8" width="720"]
 ```
 
 The options of SRS player:
