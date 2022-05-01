@@ -6,8 +6,10 @@ echo "Run pub at $WORK_DIR from $0"
 cd $WORK_DIR
 
 if [[ ! -d svn ]]; then
-  echo "no svn found, please run:"
-  echo "  svn checkout http://plugins.svn.wordpress.org/srs-player svn"
+  echo "No svn found, please run:"
+  echo "    svn checkout http://plugins.svn.wordpress.org/srs-player svn"
+  echo "Or link exists svn:"
+  echo "    ln -sf ~/git/WordPress-Plugin-SrsPlayer-svn svn"
   exit 1
 fi
 
@@ -22,8 +24,8 @@ cp -R srs-player svn/trunk &&
 if [[ $? -ne 0 ]]; then echo "Update files for $RELEASE failed"; exit 1; fi
 
 echo "Please checkin manually:"
-echo "  cd svn"
-echo "  svn ci -m \"Release $RELEASE: $GIT_MESSAGE\" --username winlinvip"
+echo "    cd svn"
+echo "    svn ci -m \"Release $RELEASE: $GIT_MESSAGE\" --username winlinvip"
 echo "Or revert it:"
-echo "  svn revert -R ."
+echo "    svn revert -R ."
 
