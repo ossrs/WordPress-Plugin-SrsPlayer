@@ -92,6 +92,7 @@ Yes, but please use default Video player of BlockEditor directly.
 2. The SRS Player Demo in a post.
 
 == Changelog ==
+* Support url alias src.
 * Default width to 100%.
 
 = 1.0.7 =

@@ -41,10 +41,11 @@ class Srs_Player_Public {
             ), $atts, $tag
         );
 
-        if (empty($q['url'])) {
+        if (empty($q['url']) && empty($q['src'])) {
             return __('Please specify the url of stream', 'srs-player');
         }
         $url = $q['url'];
+        if (empty($url)) $url = $q['src'];
         $id = 'srs-player-' . $this->random_str(32);
 
         $vControls = $q['controls'];
