@@ -4,7 +4,7 @@ Tags: video, audio, live streaming, video streaming, player, video player
 Requires at least: 5.3
 Tested up to: 5.9
 Requires PHP: 7.2
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: MIT
 License URI: https://spdx.org/licenses/MIT.html
 Author: Winlin Yang
@@ -87,6 +87,9 @@ No, please use default Video player of BlockEditor directly.
 2. The SRS Player Demo in a post.
 
 == Changelog ==
+
+= 1.0.7 =
+* Refine the release script.
 * Support play MP4 VoD file.
 * Refine release script.
 
