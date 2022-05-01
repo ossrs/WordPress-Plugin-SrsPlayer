@@ -30,6 +30,10 @@ For HTTP-FLV live streaming, the shortcode:
 
 `[srs_player url="https://your_server/live/livestream.flv"]`
 
+For HLS/MP4 VoD streaming, the shortcode:
+
+`[srs_player url="https://your_server/live/livestream.flv"]`
+
 You could create a video streaming server using [SRS Droplet](https://ossrs.medium.com/how-to-setup-a-video-streaming-service-by-1-click-e9fe6f314ac6) by only 1-Click.
 
 For detailed documentation, please visit the [Srs Player](https://github.com/ossrs/WordPress-Plugin-SrsPlayer) page.
@@ -42,6 +46,7 @@ For detailed documentation, please visit the [Srs Player](https://github.com/oss
 * Automatically play a video when the page is rendered
 * No setup required, simply install and start embedding videos
 * Lightweight and compatible with the latest version of WordPress
+* Supports HLS/MP4 VoD streaming
 
 = Shortcode Options =
 
@@ -79,7 +84,7 @@ Yes, please follow the usage, use shortcode to embed to your post.
 
 = Does SRS Player supports VoD HLS/MP4? =
 
-No, please use default Video player of BlockEditor directly.
+Yes, but please use default Video player of BlockEditor directly.
 
 == Screenshots ==
 
@@ -87,6 +92,7 @@ No, please use default Video player of BlockEditor directly.
 2. The SRS Player Demo in a post.
 
 == Changelog ==
+* Default width to 100%.
 
 = 1.0.7 =
 * Refine the release script.

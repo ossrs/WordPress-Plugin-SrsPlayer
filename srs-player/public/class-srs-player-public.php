@@ -37,7 +37,7 @@ class Srs_Player_Public {
                 'controls' => 'controls',
                 'autoplay' => 'autoplay',
                 'muted' => 'muted',
-                'width' => '',
+                'width' => '100%',
             ), $atts, $tag
         );
 
@@ -47,16 +47,20 @@ class Srs_Player_Public {
         $url = $q['url'];
         $id = 'srs-player-' . $this->random_str(32);
 
-        $controls = ' controls=' . $q['controls'];
+        $vControls = $q['controls'];
+        $controls = " controls=${vControls}";
         if ($q['controls'] != 'true' && $q['controls'] != 'controls') $controls = '';
 
-        $autoplay = ' autoplay=' . $q['autoplay'];
+        $vAutoplay = $q['autoplay'];
+        $autoplay = " autoplay=${vAutoplay}";
         if ($q['autoplay'] != 'true' && $q['autoplay'] != 'autoplay') $autoplay = '';
 
-        $muted = ' muted=' . $q['muted'];
+        $vMuted = $q['muted'];
+        $muted = " muted=${vMuted}";
         if ($q['muted'] != 'true' && $q['muted'] != 'muted') $muted = '';
 
-        $width = ' width="' . $q['width'] . '"';
+        $vWidth = $q['width'];
+        $width = " width=\"${vWidth}\"";
         if (empty($q['width'])) $width = '';
 
         $o = <<<EOT
