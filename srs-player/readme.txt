@@ -92,25 +92,25 @@ Yes, but please use default Video player of BlockEditor directly.
 2. The SRS Player Demo in a post.
 
 == Changelog ==
-* Support url alias src.
-* Default width to 100%.
+* 2022-05-01: Support url alias src.
+* 2022-05-01: Default width to 100%.
 
 = 1.0.7 =
-* Refine the release script.
-* Support play MP4 VoD file.
-* Refine release script.
+* 2022-05-01: Refine the release script.
+* 2022-05-01: Support play MP4 VoD file.
+* 2022-05-01: Refine release script.
 
 = 1.0.6 =
-* Update plugin release in readme.txt
-* Update plugin name in readme.txt
+* 2022-04-12: Update plugin release in readme.txt
+* 2022-04-12: Update plugin name in readme.txt
 
 = 1.0.4 =
-* Add screenshots for plugin.
-* Refine the installation of plugin.
-* Support auto release.
-* Refine documents content.
-* Support option width for player.
-* Support auto release.
+* 2022-04-12: Add screenshots for plugin.
+* 2022-04-12: Refine the installation of plugin.
+* 2022-04-12: Support auto release.
+* 2022-04-12: Refine documents content.
+* 2022-04-12: Support option width for player.
+* 2022-04-12: Support auto release.
 
 = 1.0.0 =
-* Support HLS/WebRTC/HTTP-FLV video streaming.
+* 2022-04-12: Support HLS/WebRTC/HTTP-FLV video streaming.
