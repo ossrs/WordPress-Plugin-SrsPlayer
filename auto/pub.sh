@@ -28,7 +28,12 @@ if [[ $? -ne 0 ]]; then echo "Change release failed"; exit 1; fi
 
 GIT_MESSAGE=$(git log -1 --pretty=%B)
 DATE_MESSAGE=$(date +%Y-%m-%d)
-cat srs-player/readme.txt | sed "s/== Changelog ==/== Changelog ==\n\n= $VERSION =\n* ${DATE_MESSAGE}: ${GIT_MESSAGE}/g" > tmp.txt &&
+grep -q "$GIT_MESSAGE" srs-player/readme.txt && EXISTS_MESSAGE=YES
+if [[ $EXISTS_MESSAGE == YES ]]; then
+  cat srs-player/readme.txt | sed "s/== Changelog ==/== Changelog ==\n\n= $VERSION =/g" > tmp.txt
+else
+  cat srs-player/readme.txt | sed "s/== Changelog ==/== Changelog ==\n\n= $VERSION =\n* ${DATE_MESSAGE}: ${GIT_MESSAGE}/g" > tmp.txt
+fi &&
 mv tmp.txt srs-player/readme.txt
 if [[ $? -ne 0 ]]; then echo "Generate Changelog failed"; exit 1; fi
 

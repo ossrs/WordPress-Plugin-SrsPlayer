@@ -1,6 +1,6 @@
 === SRS Player ===
 Contributors: winlinvip
-Tags: video, audio, live streaming, video streaming, player, video player
+Tags: video, media, woocommerce, ecommerce, e-commerce, audio, live streaming, video streaming, player, video player
 Requires at least: 5.3
 Tested up to: 5.9
 Requires PHP: 7.2
@@ -32,7 +32,7 @@ For HTTP-FLV live streaming, the shortcode:
 
 For HLS/MP4 VoD streaming, the shortcode:
 
-`[srs_player url="https://your_server/live/livestream.flv"]`
+`[srs_player url="https://your_server/vod/file.mp4"]`
 
 You could create a video streaming server using [SRS Droplet](https://ossrs.medium.com/how-to-setup-a-video-streaming-service-by-1-click-e9fe6f314ac6) by only 1-Click.
 
@@ -92,6 +92,7 @@ Yes, but please use default Video player of BlockEditor directly.
 2. The SRS Player Demo in a post.
 
 == Changelog ==
+* 2022-05-10: Refine the tags.
 * 2022-05-01: Support url alias src.
 * 2022-05-01: Default width to 100%.
 
