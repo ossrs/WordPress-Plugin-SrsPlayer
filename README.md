@@ -14,7 +14,8 @@ by 1-Click.
 Then, publish live streaming by OBS to your server, you should be able to play the stream by VLC, please follow the 
 [tutorial](https://ossrs.medium.com/how-to-setup-a-video-streaming-service-by-1-click-e9fe6f314ac6)
 
-Next, visit your WordPress, install this plugin, and create a post with the following shortcodes:
+Next, visit your WordPress, install this plugin, and create a post with the following shortcodes, please follow the 
+[tutorial](https://blog.ossrs.io/publish-your-srs-livestream-through-wordpress-ec18dfae7d6f):
 
 * For HLS: `[srs_player url="https://your_server_ip/live/livestream.m3u8"]`
 * For WebRTC: `[srs_player url="webrtc://your_server_ip/live/livestream"]`

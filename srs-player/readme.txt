@@ -24,10 +24,14 @@ Then, publish live stream to SRS by [OBS](https://obsproject.com/) and follow th
 
 Done, view stream on a WordPress post or page, please follow the tutorial: [How to Publish Your SRS Livestream Through WordPress](https://blog.ossrs.io/publish-your-srs-livestream-through-wordpress-ec18dfae7d6f), and bellow are some tips.
 
-* For HLS live streaming, please use the following shortcode: `[srs_player url="https://your_server/live/livestream.m3u8"]`
-* For WebRTC streaming, the shortcode: `[srs_player url="webrtc://your_server/live/livestream"]`
-* For HTTP-FLV live streaming, the shortcode: `[srs_player url="https://your_server/live/livestream.flv"]`
-* For HLS/MP4 VoD streaming, the shortcode: `[srs_player url="https://your_server/vod/file.mp4"]`
+* For HLS live streaming, please use the following shortcode:
+`[srs_player url="https://your_server/live/livestream.m3u8"]`
+* For WebRTC streaming, the shortcode:
+`[srs_player url="webrtc://your_server/live/livestream"]`
+* For HTTP-FLV live streaming, the shortcode:
+`[srs_player url="https://your_server/live/livestream.flv"]`
+* For HLS/MP4 VoD streaming, the shortcode:
+`[srs_player url="https://your_server/vod/file.mp4"]`
 
 For detailed documentation, please visit the [SRS Player](https://github.com/ossrs/WordPress-Plugin-SrsPlayer) page.
 
@@ -85,6 +89,7 @@ Yes, but please use default Video player of BlockEditor directly.
 2. The SRS Player Demo in a post.
 
 == Changelog ==
+* 2022-05-11: Refine the plugin shortcode.
 
 = 1.0.9 =
 * 2022-05-11: Refine the plugin usage.
