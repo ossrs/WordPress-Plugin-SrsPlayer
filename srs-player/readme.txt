@@ -4,7 +4,7 @@ Tags: video, media, woocommerce, ecommerce, e-commerce, audio, live streaming, v
 Requires at least: 5.3
 Tested up to: 5.9
 Requires PHP: 7.2
-Stable tag: 1.0.10
+Stable tag: 1.0.11
 License: MIT
 License URI: https://spdx.org/licenses/MIT.html
 Author: Winlin Yang
@@ -96,6 +96,9 @@ Yes, but please use default Video player of BlockEditor directly.
 2. The SRS Player Demo in a post.
 
 == Changelog ==
+
+= 1.0.11 =
+* 2022-05-11: Refine plugin description.
 
 = 1.0.10 =
 * 2022-05-11: Refine the plugin shortcode.
