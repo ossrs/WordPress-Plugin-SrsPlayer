@@ -98,14 +98,8 @@ Yes, but please use default Video player of BlockEditor directly.
 == Changelog ==
 
 = 1.0.12 =
-
-= 1.0.11 =
 * 2022-05-11: Refine plugin description.
-
-= 1.0.10 =
 * 2022-05-11: Refine the plugin shortcode.
-
-= 1.0.9 =
 * 2022-05-11: Refine the plugin usage.
 * 2022-05-10: Refine the plugin description.
 
