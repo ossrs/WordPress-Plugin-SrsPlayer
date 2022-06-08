@@ -60,15 +60,20 @@ class Srs_Player_Public {
         $muted = " muted=${vMuted}";
         if ($q['muted'] != 'true' && $q['muted'] != 'muted') $muted = '';
 
-        $vWidth = $q['width'];
-        $width = " width=\"${vWidth}\"";
+        $width = $q['width'];
         if (empty($q['width'])) $width = '';
+        if (!strpos($width, '%') && !strpos($width, 'px')) $width = "${width}px";
+
+        // We must use style to setup the width, or some theme like 2020 will set height to 0.
+        $style = '';
+        if (!empty($width)) $style = "<style>#${id} { width: {$width}; } </style>";
 
         $o = <<<EOT
     <div class="srs-player-wrapper">
-        <video id="${id}" ${controls}${autoplay}${muted}${width}></video>
+        <video id="${id}" ${controls}${autoplay}${muted}></video>
         <script>(function($) { new SrsPlayer("#${id}", "${url}").play(); })(jQuery);</script>
     </div>
+    $style
 EOT;
         return $o;
     }
