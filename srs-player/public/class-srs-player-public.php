@@ -29,7 +29,7 @@ class Srs_Player_Public {
         wp_enqueue_script('srs-player-main', $plugin_url . '/srs.player.js', array('jquery'), $this->version, false );
     }
 
-    public function embed_handler($atts = [], $content = null, $tag = '') {
+    public function embed_player_handler($atts = [], $content = null, $tag = '') {
         $atts = array_change_key_case((array)$atts, CASE_LOWER);
         $q = shortcode_atts(
             array(
@@ -72,6 +72,50 @@ class Srs_Player_Public {
     <div class="srs-player-wrapper">
         <video id="${id}" ${controls}${autoplay}${muted}></video>
         <script>(function($) { new SrsPlayer("#${id}", "${url}").play(); })(jQuery);</script>
+    </div>
+    $style
+EOT;
+        return $o;
+    }
+
+    public function embed_publisher_handler($atts = [], $content = null, $tag = '') {
+        $atts = array_change_key_case((array)$atts, CASE_LOWER);
+        $q = shortcode_atts(
+            array(
+                'url' => '',
+                'controls' => 'controls',
+                'width' => '100%',
+            ), $atts, $tag
+        );
+
+        if (empty($q['url']) && empty($q['src'])) {
+            return __('Please specify the url of stream', 'srs-publisher');
+        }
+        $url = $q['url'];
+        if (empty($url)) $url = $q['src'];
+        $id = 'srs-publisher-' . $this->random_str(32);
+
+        // For publisher, always disable controls.
+        $controls = '';
+
+        // For publisher, always enable autoplay.
+        $autoplay = " autoplay=autoplay";
+
+        // For publisher, always mute it.
+        $muted = " muted=muted";
+
+        $width = $q['width'];
+        if (empty($q['width'])) $width = '';
+        if (!strpos($width, '%') && !strpos($width, 'px')) $width = "${width}px";
+
+        // We must use style to setup the width, or some theme like 2020 will set height to 0.
+        $style = '';
+        if (!empty($width)) $style = "<style>#${id} { width: {$width}; } </style>";
+
+        $o = <<<EOT
+    <div class="srs-publisher-wrapper">
+        <video id="${id}" ${controls}${autoplay}${muted}></video>
+        <script>(function($) { new SrsPublisher("#${id}", "${url}").publish(); })(jQuery);</script>
     </div>
     $style
 EOT;

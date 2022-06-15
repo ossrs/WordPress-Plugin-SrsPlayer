@@ -56,5 +56,32 @@
 
     return self;
   };
+
+  window.SrsPublisher = function (dom, url) {
+    const self = {
+      dom: $(dom),
+      url,
+    };
+
+    self.publish = function() {
+      if (document.readyState !== "complete") {
+        return setTimeout(self.publish, 0);
+      }
+      self.__publish();
+    }
+
+    self.__publish = function () {
+      if (self.url.indexOf('webrtc://') === 0) {
+        const sdk = new SrsRtcPublisherAsync();
+        self.dom.prop('srcObject', sdk.stream);
+        sdk.publish(self.url);
+        return console.log(`Publish by srs.sdk.js for ${self.url}`);
+      }
+
+      console.error(`URL is not supported：${self.url}`);
+    };
+
+    return self;
+  };
 })(jQuery);
 

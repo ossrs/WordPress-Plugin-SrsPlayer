@@ -40,6 +40,10 @@ For HLS/MP4 VoD streaming, the shortcode:
 
 `[srs_player url="https://your_server/vod/file.mp4"]`
 
+You could also use WebRTC to publish live stream:
+
+`[srs_publisher url="webrtc://your_server/live/livestream"]`
+
 For detailed documentation, please visit the [SRS Player](https://github.com/ossrs/WordPress-Plugin-SrsPlayer) page.
 
 = Key Features =

@@ -21,6 +21,10 @@ Next, visit your WordPress, install this plugin, and create a post with the foll
 * For WebRTC: `[srs_player url="webrtc://your_server_ip/live/livestream"]`
 * For HTTP-FLV: `[srs_player url="https://your_server_ip/live/livestream.flv"]`
 
+You could also use WebRTC to publish live stream:
+
+* For WebRTC: `[srs_publisher url="webrtc://your_server_ip/live/livestream"]`
+
 If you are stuck, please get help from [discord](https://discord.gg/yZ4BnPmHAd)
 
 ## Options

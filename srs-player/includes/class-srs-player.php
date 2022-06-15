@@ -32,7 +32,8 @@ class Srs_Player {
         $plugin_public = new Srs_Player_Public($this->version);
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
-        $this->loader->add_shortcode('srs_player', $plugin_public, 'embed_handler');
+        $this->loader->add_shortcode('srs_player', $plugin_public, 'embed_player_handler');
+        $this->loader->add_shortcode('srs_publisher', $plugin_public, 'embed_publisher_handler');
     }
 
     public function run() {
