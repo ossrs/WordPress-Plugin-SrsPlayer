@@ -22,13 +22,13 @@
       }
 
       if (self.url.indexOf('.flv') > 0) {
-        if (!flvjs.isSupported()) return console.error(`HTTP-FLV is not supported by browser`);
+        if (!mpegts.isSupported()) return console.error(`HTTP-FLV is not supported by browser`);
 
-        const player = flvjs.createPlayer({type: 'flv', url: self.url});
+        const player = mpegts.createPlayer({type: 'flv', url: self.url});
         player.attachMediaElement(self.dom.get(0));
         player.load();
         player.play();
-        return console.log(`Play by flv.js for ${self.url}`);
+        return console.log(`Play by mpegts.js for ${self.url}`);
       }
 
       if (self.url.indexOf('.m3u8') > 0) {
