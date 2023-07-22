@@ -1,7 +1,7 @@
 # WordPress-Plugin-SrsPlayer
 
 [![](https://img.shields.io/twitter/follow/srs_server?style=social)](https://twitter.com/srs_server)
-[![](https://badgen.net/discord/members/yZ4BnPmHAd)](https://discord.gg/yZ4BnPmHAd)
+[![](https://badgen.net/discord/members/UWHTZf9mPP)](https://discord.gg/UWHTZf9mPP)
 [![](https://ossrs.net/wiki/images/do-btn-srs-125x20.svg)](https://cloud.digitalocean.com/droplets/new?appId=104916642&size=s-1vcpu-1gb&region=sgp1&image=ossrs-srs&type=applications)
 
 SRS Player is a video streaming player, supports HLS/HTTP-FLV/WebRTC etc.
