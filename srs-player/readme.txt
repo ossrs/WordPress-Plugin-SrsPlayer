@@ -4,7 +4,7 @@ Tags: video, media, woocommerce, ecommerce, e-commerce, audio, live streaming, v
 Requires at least: 5.3
 Tested up to: 6.3
 Requires PHP: 7.2
-Stable tag: 1.0.16
+Stable tag: 1.0.17
 License: MIT
 License URI: https://spdx.org/licenses/MIT.html
 Author: Winlin Yang
@@ -100,6 +100,9 @@ Yes, but please use default Video player of BlockEditor directly.
 2. The SRS Player Demo in a post.
 
 == Changelog ==
+
+= 1.0.17 =
+* 2023-07-23: Support HEVC over enhanced RTMP or FLV (#5)
 
 = 1.0.16 =
 * 2023-05-01: Test with new WordPress 6.2
