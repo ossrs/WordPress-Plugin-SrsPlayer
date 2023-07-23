@@ -23,7 +23,7 @@ class Srs_Player_Public {
         $plugin_url = plugins_url('js', __FILE__);
         wp_enqueue_script('jquery');
         wp_enqueue_script('srs-player-sdk', $plugin_url . '/srs.sdk.js', array(), $this->version, false );
-        wp_enqueue_script('srs-player-flv', $plugin_url . '/mpegts-1.7.2.min.js', array(), $this->version, false );
+        wp_enqueue_script('srs-player-flv', $plugin_url . '/mpegts-1.7.3.min.js', array(), $this->version, false );
         wp_enqueue_script('srs-player-hls', $plugin_url . '/hls-0.14.17.min.js', array(), $this->version, false );
         wp_enqueue_script('srs-player-adapter', $plugin_url . '/adapter-7.4.0.min.js', array(), $this->version, false );
         wp_enqueue_script('srs-player-main', $plugin_url . '/srs.player.js', array('jquery'), $this->version, false );

@@ -2,7 +2,7 @@
 Contributors: winlinvip
 Tags: video, media, woocommerce, ecommerce, e-commerce, audio, live streaming, video streaming, player, video player
 Requires at least: 5.3
-Tested up to: 6.2
+Tested up to: 6.3
 Requires PHP: 7.2
 Stable tag: 1.0.16
 License: MIT
