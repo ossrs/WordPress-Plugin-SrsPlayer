@@ -51,6 +51,13 @@
         return console.log(`Play by srs.sdk.js for ${self.url}`);
       }
 
+      if (self.url.indexOf('whep') > 0) {
+        const sdk = new SrsRtcWhipWhepAsync();
+        self.dom.prop('srcObject', sdk.stream);
+        sdk.play(self.url);
+        return console.log(`Play by srs.sdk.js for ${self.url}`);
+      }
+
       console.error(`URL is not supported：${self.url}`);
     };
 
@@ -73,6 +80,13 @@
     self.__publish = function () {
       if (self.url.indexOf('webrtc://') === 0) {
         const sdk = new SrsRtcPublisherAsync();
+        self.dom.prop('srcObject', sdk.stream);
+        sdk.publish(self.url);
+        return console.log(`Publish by srs.sdk.js for ${self.url}`);
+      }
+
+      if (self.url.indexOf('whip') > 0) {
+        const sdk = new SrsRtcWhipWhepAsync();
         self.dom.prop('srcObject', sdk.stream);
         sdk.publish(self.url);
         return console.log(`Publish by srs.sdk.js for ${self.url}`);

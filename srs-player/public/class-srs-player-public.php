@@ -44,6 +44,9 @@ class Srs_Player_Public {
         if (empty($q['url']) && empty($q['src'])) {
             return __('Please specify the url of stream', 'srs-player');
         }
+        // convert &amp; to &.
+        $q['url'] = html_entity_decode($q['url']);
+
         $url = $q['url'];
         if (empty($url)) $url = $q['src'];
         $id = 'srs-player-' . $this->random_str(32);
@@ -91,6 +94,9 @@ EOT;
         if (empty($q['url']) && empty($q['src'])) {
             return __('Please specify the url of stream', 'srs-publisher');
         }
+        // convert &amp; to &.
+        $q['url'] = html_entity_decode($q['url']);
+
         $url = $q['url'];
         if (empty($url)) $url = $q['src'];
         $id = 'srs-publisher-' . $this->random_str(32);
