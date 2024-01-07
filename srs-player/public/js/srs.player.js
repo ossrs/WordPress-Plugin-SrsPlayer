@@ -24,7 +24,7 @@
       if (self.url.indexOf('.flv') > 0) {
         if (!mpegts.isSupported()) return console.error(`HTTP-FLV is not supported by browser`);
 
-        const player = mpegts.createPlayer({type: 'flv', url: self.url});
+        const player = mpegts.createPlayer({type: 'flv', url: self.url, isLive: true, enableStashBuffer: false, liveSync: true});
         player.attachMediaElement(self.dom.get(0));
         player.load();
         player.play();
@@ -38,7 +38,16 @@
           return console.log(`Play by native for ${self.url}`);
         }
 
-        const player = new Hls();
+        const player = new Hls({
+          enableWorker: true, // Improve performance and avoid lag/frame drops.
+          lowLatencyMode: true, // Enable Low-Latency HLS part playlist and segment loading.
+          liveSyncDurationCount: 0, // Start from the last segment.
+          liveMaxLatencyDurationCount: 4, // Maximum delay allowed from edge of live.
+          maxBufferLength: 5, // Maximum buffer length in seconds.
+          maxMaxBufferLength: 8, // The max Maximum buffer length in seconds.
+          maxLiveSyncPlaybackRate: 2, // Catch up if the latency is large.
+          liveDurationInfinity: true // Override current Media Source duration to Infinity for a live broadcast.
+        });
         player.loadSource(self.url);
         player.attachMedia(self.dom.get(0));
         return console.log(`Play by hls.js for ${self.url}`);
