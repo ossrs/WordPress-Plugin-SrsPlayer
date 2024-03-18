@@ -24,7 +24,7 @@ class Srs_Player_Public {
         wp_enqueue_script('jquery');
         wp_enqueue_script('srs-player-sdk', $plugin_url . '/srs.sdk.js', array(), $this->version, false );
         wp_enqueue_script('srs-player-flv', $plugin_url . '/mpegts-1.7.3.min.js', array(), $this->version, false );
-        wp_enqueue_script('srs-player-hls', $plugin_url . '/hls-0.14.17.min.js', array(), $this->version, false );
+        wp_enqueue_script('srs-player-hls', $plugin_url . '/hls-1.4.14.min.js', array(), $this->version, false );
         wp_enqueue_script('srs-player-adapter', $plugin_url . '/adapter-7.4.0.min.js', array(), $this->version, false );
         wp_enqueue_script('srs-player-main', $plugin_url . '/srs.player.js', array('jquery'), $this->version, false );
     }
@@ -44,6 +44,9 @@ class Srs_Player_Public {
         if (empty($q['url']) && empty($q['src'])) {
             return __('Please specify the url of stream', 'srs-player');
         }
+        // convert &amp; to &.
+        $q['url'] = html_entity_decode($q['url']);
+
         $url = $q['url'];
         if (empty($url)) $url = $q['src'];
         $id = 'srs-player-' . $this->random_str(32);
@@ -91,6 +94,9 @@ EOT;
         if (empty($q['url']) && empty($q['src'])) {
             return __('Please specify the url of stream', 'srs-publisher');
         }
+        // convert &amp; to &.
+        $q['url'] = html_entity_decode($q['url']);
+
         $url = $q['url'];
         if (empty($url)) $url = $q['src'];
         $id = 'srs-publisher-' . $this->random_str(32);

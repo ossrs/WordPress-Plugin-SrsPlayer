@@ -24,7 +24,7 @@
       if (self.url.indexOf('.flv') > 0) {
         if (!mpegts.isSupported()) return console.error(`HTTP-FLV is not supported by browser`);
 
-        const player = mpegts.createPlayer({type: 'flv', url: self.url});
+        const player = mpegts.createPlayer({type: 'flv', url: self.url, isLive: true, enableStashBuffer: false, liveSync: true});
         player.attachMediaElement(self.dom.get(0));
         player.load();
         player.play();
@@ -38,7 +38,16 @@
           return console.log(`Play by native for ${self.url}`);
         }
 
-        const player = new Hls();
+        const player = new Hls({
+          enableWorker: true, // Improve performance and avoid lag/frame drops.
+          lowLatencyMode: true, // Enable Low-Latency HLS part playlist and segment loading.
+          liveSyncDurationCount: 2, // Start from the last few segments.
+          liveMaxLatencyDurationCount: 10, // Maximum delay allowed from edge of live.
+          maxBufferLength: 8, // Maximum buffer length in seconds.
+          maxMaxBufferLength: 10, // The max Maximum buffer length in seconds.
+          maxLiveSyncPlaybackRate: 1.2, // Catch up if the latency is large.
+          liveDurationInfinity: true // Override current Media Source duration to Infinity for a live broadcast.
+        });
         player.loadSource(self.url);
         player.attachMedia(self.dom.get(0));
         return console.log(`Play by hls.js for ${self.url}`);
@@ -46,6 +55,13 @@
 
       if (self.url.indexOf('webrtc://') === 0) {
         const sdk = new SrsRtcPlayerAsync();
+        self.dom.prop('srcObject', sdk.stream);
+        sdk.play(self.url);
+        return console.log(`Play by srs.sdk.js for ${self.url}`);
+      }
+
+      if (self.url.indexOf('whep') > 0) {
+        const sdk = new SrsRtcWhipWhepAsync();
         self.dom.prop('srcObject', sdk.stream);
         sdk.play(self.url);
         return console.log(`Play by srs.sdk.js for ${self.url}`);
@@ -73,6 +89,13 @@
     self.__publish = function () {
       if (self.url.indexOf('webrtc://') === 0) {
         const sdk = new SrsRtcPublisherAsync();
+        self.dom.prop('srcObject', sdk.stream);
+        sdk.publish(self.url);
+        return console.log(`Publish by srs.sdk.js for ${self.url}`);
+      }
+
+      if (self.url.indexOf('whip') > 0) {
+        const sdk = new SrsRtcWhipWhepAsync();
         self.dom.prop('srcObject', sdk.stream);
         sdk.publish(self.url);
         return console.log(`Publish by srs.sdk.js for ${self.url}`);
